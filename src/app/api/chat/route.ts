@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
 
     const completion = await openai.chat.completions.create({
       model: 'gpt-3.5-turbo',
-      messages: messagesWithSystem as any,
+      messages: messagesWithSystem,
       max_tokens: 1000,
       temperature: 0.9, // High creativity for more freaky responses
       frequency_penalty: 0.3, // Encourage varied language
